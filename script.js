@@ -53,10 +53,10 @@ containerBtn.addEventListener("click", ()=> {
     const caught = setInterval(() => {        
         move-=20
         if (move > -20000){
-
             container.style.transform =  `translateX(${move}px)`
             container.style.transition = `all 0.1s ease`
-            confirm("you won")
+        } else{
+            alert("Buddy You Won The Game !")
         }
         const manPos = man.getBoundingClientRect()
         const manPosTop = Math.round(manPos.top)
