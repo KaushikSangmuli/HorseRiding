@@ -9,7 +9,7 @@ let distance = 200
 const replay =  document.querySelector("#replay")
 
 for (let i=1 ; i<50;  i++){
-distance += 300
+distance += 340
 let stone = document.createElement("div")
 stone.classList.add(`stone${i}`)
 stone.classList.add(`obstacle`)
@@ -52,10 +52,11 @@ containerBtn.addEventListener("click", ()=> {
 
     const caught = setInterval(() => {        
         move-=20
-        if (move> -2000){
+        if (move > -20000){
 
             container.style.transform =  `translateX(${move}px)`
             container.style.transition = `all 0.1s ease`
+            confirm("you won")
         }
         const manPos = man.getBoundingClientRect()
         const manPosTop = Math.round(manPos.top)
